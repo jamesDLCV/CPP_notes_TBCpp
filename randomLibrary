@@ -1,4 +1,5 @@
-// random numbers from 1 to 6 (include 6) 
+// random numbers from 1 to 6 (include 6)
+// c++ 11
 
 #include <iostream>
 #include <random>
