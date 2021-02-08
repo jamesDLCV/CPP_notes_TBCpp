@@ -1,0 +1,20 @@
+// random numbers from 1 to 6 (include 6) 
+
+#include <iostream>
+#include <random>
+using namespace std;
+
+int main()
+{
+    random_device rd;
+    mt19937 mersenne(rd());
+    uniform_int_distribution<> dice(1, 6);
+
+    for (int i = 1; i <= 20; ++i)
+    {
+        cout << dice(mersenne) << endl;
+    }
+
+    return 0;
+}
+ 
