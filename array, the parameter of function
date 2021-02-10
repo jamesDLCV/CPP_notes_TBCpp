@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+void doSomething(int students_scores[])                       // the paremeter is not an array, but a pointer
+{
+    cout << "doSomething():" << endl;
+    cout << (int)&students_scores << endl;                    // different address
+    cout << (int)&students_scores[0] << endl;                 // same address
+    cout << "sizeof: " << sizeof(students_scores) << endl;    // 4 or 8(64bits)
+
+    cout << students_scores[0] << endl;
+    cout << students_scores[1] << endl;
+    cout << students_scores[2] << endl;
+}
+
+int main()
+{
+    const int num_students = 20;
+    int students_scores[num_students] = { 1, 2, 3, 4, 5, };
+
+    cout << "in the main:" << endl;
+    cout << (int)students_scores << endl;                     // same address
+    cout << (int)&students_scores << endl;                    // same address
+    cout << (int)&students_scores[0] << endl;                 // same address
+    cout << "sizeof: " << sizeof(students_scores) << endl;    // 80 (32bits or 64bits)
+    
+    cout << students_scores[0] << endl;
+    cout << students_scores[1] << endl;
+    cout << students_scores[2] << endl;
+
+    doSomething(students_scores);
+
+    return 0;
+}
