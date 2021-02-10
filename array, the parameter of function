@@ -4,7 +4,7 @@ using namespace std;
 void doSomething(int students_scores[])                       // the paremeter is not an array, but a pointer
 {
     cout << "doSomething():" << endl;
-    cout << (int)&students_scores << endl;                    // different address
+    cout << (int)&students_scores << endl;                    // different address because it's a pointer
     cout << (int)&students_scores[0] << endl;                 // same address
     cout << "sizeof: " << sizeof(students_scores) << endl;    // 4 or 8(64bits)
 
