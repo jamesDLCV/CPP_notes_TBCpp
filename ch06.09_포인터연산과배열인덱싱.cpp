@@ -21,7 +21,7 @@ int main()
 
     cout << uintptr_t(ptr - 1) << endl;     // 6422128
     cout << uintptr_t(ptr) << endl;         // 6422132
-                          // (int)ptr 이렇게 했었는데 unintptr_t가 더 좋다.
+                          // (int)ptr 이렇게 했었는데 uintptr_t가 더 좋다.
     cout << uintptr_t(ptr + 1) << endl;     // 6422136
     cout << uintptr_t(ptr + 2) << endl;     // 6422140
     cout << endl;
