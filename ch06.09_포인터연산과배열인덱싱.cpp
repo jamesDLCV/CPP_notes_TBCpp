@@ -151,18 +151,18 @@ int main()
     //// 연습 문제) while문과 break를 사용해서 Jack jack을 출력하되,
     ////           null character는 출력을 하지 말아라. ++ptr을 사용하라.
     {
-        char name2[] = "Jack2 jack2";  // 정적 array, 내부적으로는 pointer이다.
-        const int n_name2 = sizeof(name2) / sizeof(name2[0]); // sizeof(char)
+        char name[] = "Jack jack";  // 정적 array, 내부적으로는 pointer이다.
+        const int n_name = sizeof(name) / sizeof(name[0]); // sizeof(char)
 
-        char *ptr6 = name2;      // 이렇게 casting해 준다.
+        char *ptr = name;      // 이렇게 casting해 준다.
         int i = 0;
 
         while (true)
         {
-            cout << *(++ptr6 - 1);
+            cout << *(++ptr - 1);
 
-            if (i >= n_name2 - 2)
-            {
+            if (i >= n_name - 2)    // null character 제외를 위해 -2를 함. 
+            {                       // i = 0부터이므로 8까지만 반복되야 한다.
                 break;
             }
             ++i;
@@ -170,9 +170,12 @@ int main()
         cout << "There is no white space." << endl;
         cout << endl;
     }
+    // char name[] = "Jack jack"; 의 index와, 개수, sizeof를 써 보라. 
+    // index는 index0 ~ index8까지, 총 9개
+    // sizeof는 10개다. 문자 9개 + null character 1개.  
+
     // 포인터 연산에 대해서 살펴 봤고,
     // 포인터 연산을 통해서 array 속에 들어 있는 elements에 접근하는 방법도
     // 살펴 봤다.
-
     return 0;
 }
