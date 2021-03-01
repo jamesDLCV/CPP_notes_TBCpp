@@ -16,8 +16,8 @@ int main()
 {
     array<int, 5> my_arr = { 1, 21, 3, 40, 5 }; // 숫자가 뒤죽박죽이게 만든다.
 
-    for (auto &element : my_arr)    // 여기에도 reference를 달아줄 수 있다. 중간 복사 생략.
-                                    // 빨라진다.
+    for (auto &element : my_arr)    // 여기에도 reference를 달아줄 수 있다. 
+                                    // 중간 복사 생략. 빨라진다.
         cout << element << " ";     // 1 21 3 40 5
     cout << endl;
     cout << endl;
